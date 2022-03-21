@@ -42,7 +42,7 @@ class _LandingTopBarState extends State<LandingTopBar> {
         children: [
           SizedBox(
             width: (width! / 2.5) - 430,
-            height: 40,
+            height: height! / 20,
             child: Card(
                 margin: EdgeInsets.zero,
                 elevation: 8,

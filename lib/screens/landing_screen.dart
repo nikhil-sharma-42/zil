@@ -42,7 +42,7 @@ class _LandingScreenState extends State<LandingScreen> {
                       child: Padding(
                         padding:
                             EdgeInsets.only(top: SizeConfig.screenWidth! / 90),
-                        child: const LandingTopBar(),
+                        child: LandingTopBar(),
                       ),
                     ),
                     const Expanded(child: SizedBox())
