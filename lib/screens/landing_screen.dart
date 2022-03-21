@@ -3,7 +3,7 @@ import '../app/size_config.dart';
 import '../widgets/landing_top_bar.dart';
 
 class LandingScreen extends StatefulWidget {
-  LandingScreen({Key? key}) : super(key: key);
+  const LandingScreen({Key? key}) : super(key: key);
 
   @override
   State<LandingScreen> createState() => _LandingScreenState();
@@ -25,7 +25,7 @@ class _LandingScreenState extends State<LandingScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
+            SizedBox(
               height: (SizeConfig.screenHeight!) * 1.3,
               child: Stack(children: [
                 Container(
@@ -39,9 +39,13 @@ class _LandingScreenState extends State<LandingScreen> {
                   ),
                   child: Column(children: [
                     Expanded(
-                      child: LandingTopBar(),
+                      child: Padding(
+                        padding:
+                            EdgeInsets.only(top: SizeConfig.screenWidth! / 90),
+                        child: const LandingTopBar(),
+                      ),
                     ),
-                    Expanded(child: SizedBox())
+                    const Expanded(child: SizedBox())
                   ]),
                 ),
                 titledImagesRows()
@@ -65,13 +69,13 @@ class _LandingScreenState extends State<LandingScreen> {
   Widget titledImagesRows() {
     return Align(
       alignment: Alignment.bottomCenter,
-      child: Container(
+      child: SizedBox(
         // color: Colors.black,
         // margin: EdgeInsets.only(bottom: 80, left: 50, right: 50),
         height: SizeConfig.screenHeight! * .5,
         child: Column(
           children: [
-            Container(
+            SizedBox(
               height: 150,
               width: SizeConfig.screenWidth! / 2,
               child: Row(
@@ -94,7 +98,7 @@ class _LandingScreenState extends State<LandingScreen> {
                 ],
               ),
             ),
-            Container(
+            SizedBox(
               height: 150,
               width: SizeConfig.screenWidth! / 1.5,
               child: Row(
@@ -103,22 +107,22 @@ class _LandingScreenState extends State<LandingScreen> {
                 children: [
                   rotatedCards(context, 130, 130,
                       'https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80'),
-                  SizedBox(
+                  const SizedBox(
                     width: 50,
                   ),
                   rotatedCards(context, 130, 130,
                       'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'),
-                  SizedBox(
+                  const SizedBox(
                     width: 50,
                   ),
                   rotatedCards(context, 130, 130,
                       'https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'),
-                  SizedBox(
+                  const SizedBox(
                     width: 50,
                   ),
                   rotatedCards(context, 130, 130,
                       'https://images.unsplash.com/photo-1527061011665-3652c757a4d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80'),
-                  SizedBox(
+                  const SizedBox(
                     width: 50,
                   ),
                   rotatedCards(context, 130, 130,
@@ -133,12 +137,11 @@ class _LandingScreenState extends State<LandingScreen> {
   }
 
   Widget onOfferRow() {
-    return Container(
-        child: Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.only(left: 50),
+          padding: EdgeInsets.only(left: SizeConfig.screenWidth! / 35),
           child: Text(
             'On Offer/Best Sellers',
             style: TextStyle(
@@ -161,10 +164,10 @@ class _LandingScreenState extends State<LandingScreen> {
                           .jumpTo(scrollController.position.extentAfter);
                     }
                   },
-                  icon: Icon(Icons.arrow_back_ios)),
+                  icon: const Icon(Icons.arrow_back_ios)),
             ),
             Expanded(
-              child: Container(
+              child: SizedBox(
                 height: SizeConfig.screenHeight! / 3,
                 // width: MediaQuery.of(context).size.width * 0.90,
                 child: ListView.builder(
@@ -196,17 +199,16 @@ class _LandingScreenState extends State<LandingScreen> {
                           .jumpTo(scrollController.position.extentAfter);
                     }
                   },
-                  icon: Icon(Icons.arrow_forward_ios_rounded)),
+                  icon: const Icon(Icons.arrow_forward_ios_rounded)),
             ),
           ],
         )
       ],
-    ));
+    );
   }
 
   Widget trendingCollectionRow() {
-    return Container(
-        child: Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
@@ -218,7 +220,7 @@ class _LandingScreenState extends State<LandingScreen> {
         SizedBox(
           height: SizeConfig.screenHeight! * 0.03,
         ),
-        Container(
+        SizedBox(
           height: SizeConfig.screenHeight! / 9,
           width: MediaQuery.of(context).size.width * 0.95,
           child: ListView.builder(
@@ -242,16 +244,15 @@ class _LandingScreenState extends State<LandingScreen> {
               }),
         )
       ],
-    ));
+    );
   }
 
   Widget onOfferRow2() {
-    return Container(
-        child: Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.only(left: 50),
+          padding: EdgeInsets.only(left: SizeConfig.screenWidth! / 35),
           child: Text(
             'On Offer/Best Sellers',
             style: TextStyle(
@@ -274,10 +275,10 @@ class _LandingScreenState extends State<LandingScreen> {
                           .jumpTo(scrollController2.position.extentAfter);
                     }
                   },
-                  icon: Icon(Icons.arrow_back_ios)),
+                  icon: const Icon(Icons.arrow_back_ios)),
             ),
             Expanded(
-              child: Container(
+              child: SizedBox(
                 height: SizeConfig.screenHeight! / 3,
                 // width: MediaQuery.of(context).size.width * 0.90,
                 child: ListView.builder(
@@ -309,12 +310,12 @@ class _LandingScreenState extends State<LandingScreen> {
                           .jumpTo(scrollController2.position.extentAfter);
                     }
                   },
-                  icon: Icon(Icons.arrow_forward_ios_rounded)),
+                  icon: const Icon(Icons.arrow_forward_ios_rounded)),
             ),
           ],
         )
       ],
-    ));
+    );
   }
 
   Widget rotatedCards(

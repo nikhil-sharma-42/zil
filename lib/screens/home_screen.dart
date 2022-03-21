@@ -4,10 +4,11 @@ import 'package:zil/constants/custom_color.dart';
 import 'package:zil/models/model.dart';
 
 import '../../provider/app_provider.dart';
-import '../widgets/home_top_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   late AppProvider _appProvider;
+
+  HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

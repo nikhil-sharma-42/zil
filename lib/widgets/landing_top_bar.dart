@@ -1,7 +1,5 @@
-import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:zil/app/size_config.dart';
 import 'package:zil/constants/custom_color.dart';
 
 class LandingTopBar extends StatefulWidget {
@@ -12,11 +10,6 @@ class LandingTopBar extends StatefulWidget {
 }
 
 class _LandingTopBarState extends State<LandingTopBar> {
-  final TextStyle _textStyle = const TextStyle(
-    fontSize: 14,
-    color: CustomColor.lightGrey,
-    fontWeight: FontWeight.w400,
-  );
   double? height;
   double? width;
   FocusNode focusNode = FocusNode();
@@ -61,7 +54,7 @@ class _LandingTopBarState extends State<LandingTopBar> {
                     width: ((width! / 2.5) - 100) * .6,
                     child: DropdownButtonHideUnderline(
                       child: DropdownButton<String>(
-                        hint: Text(
+                        hint: const Text(
                           'Search',
                           style: TextStyle(
                               color: Colors.black, fontWeight: FontWeight.w600),

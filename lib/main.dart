@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:zil/provider/app_provider.dart';
-import 'package:zil/screens/home_screen.dart';
 import 'package:zil/screens/landing_screen.dart';
 import 'package:zil/theme/theme_data.dart';
 
