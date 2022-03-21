@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:zil/constants/custom_color.dart';
 import 'package:zil/models/model.dart';
-import 'package:zil/widgets/top_bar.dart';
 
 import '../../provider/app_provider.dart';
+import '../widgets/home_top_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   late AppProvider _appProvider;
@@ -21,7 +21,6 @@ class HomeScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const TopBar(),
                       Padding(
                         padding: const EdgeInsets.only(left: 60.0),
                         child: menuItemsRow(context),
