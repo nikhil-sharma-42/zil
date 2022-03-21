@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:zil/app/size_config.dart';
 import 'package:zil/constants/custom_color.dart';
 
 class LandingTopBar extends StatefulWidget {
@@ -40,7 +41,7 @@ class _LandingTopBarState extends State<LandingTopBar> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
-            width: (width! / 2.5) - 450,
+            width: (width! / 2.5) - 430,
             height: 40,
             child: Card(
                 margin: EdgeInsets.zero,
@@ -54,13 +55,20 @@ class _LandingTopBarState extends State<LandingTopBar> {
                     width: ((width! / 2.5) - 100) * .6,
                     child: DropdownButtonHideUnderline(
                       child: DropdownButton<String>(
-                        hint: const Text(
+                        hint: Text(
                           'Search',
                           style: TextStyle(
-                              color: Colors.black, fontWeight: FontWeight.w600),
+                              fontFamily: 'Sans',
+                              fontSize: SizeConfig.screenHeight! * 0.023,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w600),
                         ),
                         value: dropdownValue,
-                        icon: const Icon(Icons.arrow_drop_down),
+                        icon: Icon(
+                          Icons.arrow_drop_down,
+                          color: Color(0xFFC4C4C4),
+                          size: SizeConfig.screenWidth! * 0.02,
+                        ),
                         elevation: 16,
                         style: const TextStyle(color: Colors.deepPurple),
                         underline: Container(
@@ -103,10 +111,12 @@ class _LandingTopBarState extends State<LandingTopBar> {
                     width: ((width! / 2.5) - 100) * .6,
                     child: TextFormField(
                       focusNode: focusNode,
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: 'Search',
                           hintStyle: TextStyle(
+                              height: SizeConfig.screenHeight! * 0.0035,
+                              fontSize: SizeConfig.screenHeight! * 0.023,
                               color: Colors.black,
                               fontWeight: FontWeight.w600)),
                     ),

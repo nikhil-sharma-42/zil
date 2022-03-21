@@ -77,23 +77,41 @@ class _LandingScreenState extends State<LandingScreen> {
           children: [
             SizedBox(
               height: 150,
-              width: SizeConfig.screenWidth! / 2,
+              width: SizeConfig.screenWidth! / 2.2,
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   rotatedCards(
                     context,
-                    100,
-                    100,
+                    SizeConfig.screenWidth! * 0.07,
+                    SizeConfig.screenWidth! * 0.07,
                     'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
                   ),
-                  rotatedCards(context, 130, 130,
+                  SizedBox(
+                    width: SizeConfig.screenWidth! * 0.035,
+                  ),
+                  rotatedCards(
+                      context,
+                      SizeConfig.screenWidth! * 0.09,
+                      SizeConfig.screenWidth! * 0.09,
                       'https://images.unsplash.com/photo-1602351447937-745cb720612f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80',
                       isOpacity: true),
-                  rotatedCards(context, 100, 100,
+                  SizedBox(
+                    width: SizeConfig.screenWidth! * 0.035,
+                  ),
+                  rotatedCards(
+                      context,
+                      SizeConfig.screenWidth! * 0.07,
+                      SizeConfig.screenWidth! * 0.07,
                       'https://images.unsplash.com/photo-1493625926644-63185e3d4e15?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=416&q=80'),
-                  rotatedCards(context, 100, 100,
+                  SizedBox(
+                    width: SizeConfig.screenWidth! * 0.045,
+                  ),
+                  rotatedCards(
+                      context,
+                      SizeConfig.screenWidth! * 0.07,
+                      SizeConfig.screenWidth! * 0.07,
                       'https://images.unsplash.com/photo-1452827073306-6e6e661baf57?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'),
                 ],
               ),
@@ -102,30 +120,45 @@ class _LandingScreenState extends State<LandingScreen> {
               height: 150,
               width: SizeConfig.screenWidth! / 1.5,
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  rotatedCards(context, 130, 130,
+                  rotatedCards(
+                      context,
+                      SizeConfig.screenWidth! * 0.09,
+                      SizeConfig.screenWidth! * 0.09,
                       'https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80'),
-                  const SizedBox(
-                    width: 50,
+                  SizedBox(
+                    width: SizeConfig.screenWidth! * 0.04,
                   ),
-                  rotatedCards(context, 130, 130,
+                  rotatedCards(
+                      context,
+                      SizeConfig.screenWidth! * 0.09,
+                      SizeConfig.screenWidth! * 0.09,
                       'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'),
-                  const SizedBox(
-                    width: 50,
+                  SizedBox(
+                    width: SizeConfig.screenWidth! * 0.04,
                   ),
-                  rotatedCards(context, 130, 130,
+                  rotatedCards(
+                      context,
+                      SizeConfig.screenWidth! * 0.09,
+                      SizeConfig.screenWidth! * 0.09,
                       'https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'),
-                  const SizedBox(
-                    width: 50,
+                  SizedBox(
+                    width: SizeConfig.screenWidth! * 0.04,
                   ),
-                  rotatedCards(context, 130, 130,
+                  rotatedCards(
+                      context,
+                      SizeConfig.screenWidth! * 0.09,
+                      SizeConfig.screenWidth! * 0.09,
                       'https://images.unsplash.com/photo-1527061011665-3652c757a4d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80'),
-                  const SizedBox(
-                    width: 50,
+                  SizedBox(
+                    width: SizeConfig.screenWidth! * 0.05,
                   ),
-                  rotatedCards(context, 130, 130,
+                  rotatedCards(
+                      context,
+                      SizeConfig.screenWidth! * 0.07,
+                      SizeConfig.screenWidth! * 0.07,
                       'https://images.unsplash.com/photo-1495231916356-a86217efff12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80'),
                 ],
               ),
@@ -168,7 +201,8 @@ class _LandingScreenState extends State<LandingScreen> {
             ),
             Expanded(
               child: SizedBox(
-                height: SizeConfig.screenHeight! / 3,
+                height: SizeConfig.screenHeight! / 2.2,
+
                 // width: MediaQuery.of(context).size.width * 0.90,
                 child: ListView.builder(
                     key: scrollKey,
@@ -178,8 +212,8 @@ class _LandingScreenState extends State<LandingScreen> {
                     itemCount: 15,
                     itemBuilder: (BuildContext context, int index) {
                       return SizedBox(
-                          width: SizeConfig.screenHeight! / 4,
-                          height: SizeConfig.screenWidth! / 4,
+                          width: SizeConfig.screenHeight! / 3.07,
+                          // height: SizeConfig.screenWidth! / 9,
                           child: Card(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20),
@@ -221,16 +255,19 @@ class _LandingScreenState extends State<LandingScreen> {
           height: SizeConfig.screenHeight! * 0.03,
         ),
         SizedBox(
-          height: SizeConfig.screenHeight! / 9,
+          height: SizeConfig.screenHeight! / 7,
           width: MediaQuery.of(context).size.width * 0.95,
-          child: ListView.builder(
+          child: ListView.separated(
+              separatorBuilder: (BuildContext context, int index) {
+                return SizedBox(width: SizeConfig.screenWidth! * 0.02);
+              },
               scrollDirection: Axis.horizontal,
               // shrinkWrap: true,
-              itemCount: 15,
+              itemCount: 6,
               itemBuilder: (BuildContext context, int index) {
                 return SizedBox(
-                    width: SizeConfig.screenWidth! / 9,
-                    height: SizeConfig.screenHeight! / 20,
+                    width: SizeConfig.screenWidth! / 7,
+                    height: SizeConfig.screenHeight! / 10,
                     child: Padding(
                       padding:
                           EdgeInsets.only(right: SizeConfig.screenWidth! / 90),
@@ -279,7 +316,8 @@ class _LandingScreenState extends State<LandingScreen> {
             ),
             Expanded(
               child: SizedBox(
-                height: SizeConfig.screenHeight! / 3,
+                height: SizeConfig.screenHeight! / 2.2,
+
                 // width: MediaQuery.of(context).size.width * 0.90,
                 child: ListView.builder(
                     key: scrollKey2,
@@ -289,8 +327,8 @@ class _LandingScreenState extends State<LandingScreen> {
                     itemCount: 15,
                     itemBuilder: (BuildContext context, int index) {
                       return SizedBox(
-                          width: SizeConfig.screenHeight! / 4,
-                          height: SizeConfig.screenWidth! / 4,
+                          width: SizeConfig.screenHeight! / 3.07,
+                          // height: SizeConfig.screenWidth! / 9,
                           child: Card(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20),
