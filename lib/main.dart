@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<AppProvider>.value(
           value: AppProvider(),
         ),
-      ], child: ProductPage()),
+      ], child: CheckoutPage()),
     );
   }
 }
