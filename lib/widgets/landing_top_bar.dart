@@ -41,7 +41,7 @@ class _LandingTopBarState extends State<LandingTopBar> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
-            width: (width! / 2.5) - 430,
+            width: width! / 8,
             height: height! / 20,
             child: Card(
                 margin: EdgeInsets.zero,
@@ -55,13 +55,15 @@ class _LandingTopBarState extends State<LandingTopBar> {
                     width: ((width! / 2.5) - 100) * .6,
                     child: DropdownButtonHideUnderline(
                       child: DropdownButton<String>(
-                        hint: Text(
-                          'Search',
-                          style: TextStyle(
-                              fontFamily: 'Sans',
-                              fontSize: SizeConfig.screenHeight! * 0.023,
-                              color: Colors.black,
-                              fontWeight: FontWeight.w600),
+                        hint: FittedBox(
+                          child: Text(
+                            'Search',
+                            style: TextStyle(
+                                fontFamily: 'Sans',
+                                fontSize: 16,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w600),
+                          ),
                         ),
                         value: dropdownValue,
                         icon: Icon(

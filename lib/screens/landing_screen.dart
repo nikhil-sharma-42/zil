@@ -175,11 +175,11 @@ class _LandingScreenState extends State<LandingScreen> {
       children: [
         Padding(
           padding: EdgeInsets.only(left: SizeConfig.screenWidth! / 35),
-          child: Text(
-            'On Offer/Best Sellers',
-            style: TextStyle(
-                fontWeight: FontWeight.w600,
-                fontSize: SizeConfig.screenWidth! * 0.015),
+          child: FittedBox(
+            child: Text(
+              'On Offer/Best Sellers',
+              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25),
+            ),
           ),
         ),
         SizedBox(
@@ -245,11 +245,11 @@ class _LandingScreenState extends State<LandingScreen> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          'Trending Collection',
-          style: TextStyle(
-              fontWeight: FontWeight.w600,
-              fontSize: SizeConfig.screenWidth! * 0.015),
+        FittedBox(
+          child: Text(
+            'Trending Collection',
+            style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25),
+          ),
         ),
         SizedBox(
           height: SizeConfig.screenHeight! * 0.03,
@@ -290,11 +290,11 @@ class _LandingScreenState extends State<LandingScreen> {
       children: [
         Padding(
           padding: EdgeInsets.only(left: SizeConfig.screenWidth! / 35),
-          child: Text(
-            'On Offer/Best Sellers',
-            style: TextStyle(
-                fontWeight: FontWeight.w600,
-                fontSize: SizeConfig.screenWidth! * 0.015),
+          child: FittedBox(
+            child: Text(
+              'On Offer/Best Sellers',
+              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25),
+            ),
           ),
         ),
         SizedBox(

@@ -112,6 +112,7 @@ class _TopBarState extends State<TopBar> {
       width: (width! / 2) - 100,
       height: 35,
       child: Card(
+          color: Color(0xFFF6F6F6),
           margin: EdgeInsets.zero,
           elevation: 8,
           shape: RoundedRectangleBorder(
